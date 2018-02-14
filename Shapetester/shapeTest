@@ -1,0 +1,29 @@
+import Box, Sphere, Pyramid
+
+shape = str(input("What shape are you testing? Box - b, Sphere - s, or Pyramid?"))
+a=False
+while(a==False):
+    if(shape== 'b'):
+        b1  = Box.Box()
+        b1.length = int(input("what is the length of the box?"))
+        b1.width = int(input("what is the width of the box?"))
+        b1.height = int(input("what is the height of the box?"))
+        b1.calcVol()
+        #b1.SA()
+        # print(b1.volume)
+        # print(b1.SA)
+    elif(shape == 's'):
+        s1 = Sphere.Sphere()
+        s1.radius = int(input("what is the radius of the sphere"))
+        s1.volume()
+        print(s1.radius)
+        print("The volume is", s1.volume)
+        print("the Surface Area is", s1.SA)
+    elif(shape == 'p'):
+        p1 = Pyramid.Pyramid()
+        p1.slantHeight = int(input("what is the slant height of the pyramid?"))
+        p1.altitude = int(input("what is the altitude of the pyramid?"))
+        p1.base = int(input("what is the base of the pyramid?"))
+        print(p1.volume)
+        print(p1.SA)
+                             
